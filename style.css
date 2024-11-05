@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+
+body{
+   background-color: antiquewhite; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    font-family:'Ubuntu', sans-serif ;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+.brand img{
+    width: 44px ;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round' , sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    
+    
+}
+
+.icons{
+    
+    margin-top: 14px;
+}
+.icons i{
+ cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+/* .songItem{
+    height: 50px;
+    display: flex;
+    background-color: white; 
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    margin: 12px;
+    
+
+}
+
+.songItem img{
+    width : 43px;
+    margin: 0 23px ;
+    border-radius: 34px;
+} */
+
+
+.songItem {
+    height: 50px; /* Default height */
+    display: flex;
+    background-color: rgb(198, 192, 192); 
+    color: black;
+    justify-content: space-between; /* Space between items */
+    align-items: center;
+    border-radius: 34px;
+    margin: 12px;
+    padding: 10px; /* Add padding for better spacing */
+    flex-wrap: nowrap; /* Prevent wrapping for default */
+}
+
+.songItem img {
+    width: 43px; /* Default image width */
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+/* Play/Pause Button Container */
+.playPauseContainer {
+    margin-left: auto; /* Push the container to the far right */
+    display: flex; /* Use flex to align buttons */
+    align-items: center; /* Center align buttons */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .songItem {
+        height: auto; /* Allow height to adjust based on content */
+        flex-direction: row; /* Keep items in a row */
+        padding: 8px; /* Reduce padding */
+        margin: 8px; /* Adjust margin for smaller screens */
+    }
+
+    .songItem img {
+        width: 36px; /* Slightly smaller image size for mobile */
+        margin: 0 10px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .songItem {
+        height: auto; /* Allow height to adjust based on content */
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center align items */
+        padding: 6px; /* Further reduce padding */
+        margin: 5px; /* Adjust margin */
+    }
+
+    .songItem img {
+        width: 30px; /* Further reduce image size */
+        margin: 0 5px; /* Adjust margin for smaller screens */
+    }
+
+    /* Ensure that the song item takes full width on small screens */
+    .songItem {
+        width: 100%; /* Make sure song items take full width */
+    }
+}
+
+.timeStamp{
+    margin: 0 23px;
+
+}
+
+.timeStamp i {
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top:74px ;
+
+}
+
+.songInfo{
+    
+    position: absolute;
+    right: 90%;
+    left: 5%;
+    font-family: 'Varela Round' , sans-serif;
+    
+}
+
+.songInfo img{
+    
+    opacity: 0;
+    transition: opacity .4s ease-in;
+}
